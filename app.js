@@ -102,12 +102,6 @@ const displayNetworkId = arr => {
     arr = arr.match(/.{1,8}/g).join('.');
     networkIDBinArr = arr.split('.');
 
-    // - show binary
-    document.querySelector('#networkIDBin1').textContent = networkIDBinArr[0];
-    document.querySelector('#networkIDBin2').textContent = networkIDBinArr[1];
-    document.querySelector('#networkIDBin3').textContent = networkIDBinArr[2];
-    document.querySelector('#networkIDBin4').textContent = networkIDBinArr[3];
-
     // - show decimal
     document.querySelector('#networkIDDec1').textContent = parseInt(networkIDBinArr[0],2);
     document.querySelector('#networkIDDec2').textContent = parseInt(networkIDBinArr[1],2);
@@ -133,11 +127,6 @@ const generateWildcard = arr => {
     arrString = wildcardBinArray.join('').match(/.{1,8}/g).join('.');
     wildcardBinArray = arrString.split('.');
 
-    // - show binary
-    document.querySelector('#wildcardBin1').textContent = wildcardBinArray[0];
-    document.querySelector('#wildcardBin2').textContent = wildcardBinArray[1];
-    document.querySelector('#wildcardBin3').textContent = wildcardBinArray[2];
-    document.querySelector('#wildcardBin4').textContent = wildcardBinArray[3];
 };
 
 const generateBrodcast = (networkIDArr, wildcardArr) => {
